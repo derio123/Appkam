@@ -1,0 +1,7 @@
+{
+  "name": "APPKAM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
