@@ -12,26 +12,24 @@
   </ion-header>
 
   <div id="container">
-
-    <ion-grid fixed>
+    <ion-grid>
       <ion-row>
-        <ion-col size="6" col-6 col-md-4 col-xl-3 
-        *ngFor="let photo of photoServe.photos; index as position">
+        <ion-col size="6" *ngFor="let photo of photoServe.photos; index as position">
           <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>
-
-    <ion-fab class="buttonKam" vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button (click)="addPhotoGallery()">
-        <ion-icon name="camera-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-
-    <ion-fab class="buttonKam" vertical="bottom" horizontal="start" slot="fixed">
-      <ion-fab-button fill="clear" expand="full" color="light" (click)="selectImage()">
-        <ion-icon name="folder-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
   </div>
+
+  <ion-fab class="buttonKam" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addPhotoGallery()">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab class="buttonKam" vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button fill="clear" expand="full" color="light" (click)="selectImage()">
+      <ion-icon name="folder-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

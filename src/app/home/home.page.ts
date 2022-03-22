@@ -16,7 +16,6 @@ export class HomePage {
     await this.photoServe.loadPhotos();
   }
 
-
   addPhotoGallery() {
     this.photoServe.addNewPhoto();
   }
